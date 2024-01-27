@@ -118,3 +118,26 @@ Note : go to -> githup ->profile icon-> settings -> SSH-CFG -> paste ssh key wit
 You have successfully added the key 'local-repo' name. 
 (now local repo connected with remote repo using ssh key)
 SHA256: short part of unique key.
+
+Git tags :
+----------
+>git remote -v
+origin  ssh-url-of-repository (fetch) (files fetch from this repository)
+origin  ssh-url-of-repository (push) (files changes pushed to this repository)
+
+Userful for mention version of current completed state of project via tag command.
+
+Show existing tags :
+--------------------
+>git tag    
+Typse of Tags :
+----------------
+1. Annotated tags (used for large projects) 2. Lightweighted tags.
+
+Set a tag for current project state.
+------------------------------------
+>git tag version_1 -m "Project Version-1"
+
+Push tag to Remote repository :
+-------------------------------
+>git push origin tag_name       (check the git hub repo's tag section.)
