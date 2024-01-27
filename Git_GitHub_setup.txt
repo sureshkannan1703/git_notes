@@ -142,4 +142,31 @@ Push tag to Remote repository :
 -------------------------------
 >git push origin tag_name       (check the git hub repo's tag section.)
 
-created temp_brach
+Branches :
+----------
+>git branch  (list all branches of repository)
+>git branch --all (list local and remote branch details)
+>git branch - (switch to previous branch)
+>git branch -d branch_name (delete the branch)
+>git push origin branch_name (puch branch to remote repository)
+Merge branches :
+-----------------
+Creating new branch :
+---------------------
+>git switch -b temp_branch  
+> git switch temp_branch
+Switched to branch 'temp_branch'
+> git status
+On branch temp_branch
+nothing to commit, working tree clean
+Work on temp branch and make changes.
+Push temp branch to remote repository :
+----------------------------------------
+> git push origin temp_branch
+
+if you want some other branch work to main branch,
+--------------------------------------------------
+> git switch main
+Switched to branch 'main'   (make sure you're in main before merge)
+> git merge temp_branch
+> git push origin main
