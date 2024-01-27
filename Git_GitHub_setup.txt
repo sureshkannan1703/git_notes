@@ -1,0 +1,120 @@
+Git notes :
+------------
+Git_learning> git --version
+git version 2.43.0.windows.1
+
+Git_learning> git config --global --list
+user.name=Suresh kannan
+user.email=xxx@gmail.com
+
+Git_learning> git status
+fatal: not a git repository (or any of the parent directories): .git   
+
+Git_learning> git init
+Initialized empty Git repository in C:/Users/sures/LLD/Git-GitHub/Git_learning/.git/
+
+Check Status of the Repository :
+--------------------------------
+Git_learning> git status
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+Change -> master to main (Repo name):
+--------------------------------------
+Git_learning> git init -b main
+Initialized empty Git repository in C:/Users/sures/LLD/Git-GitHub/Git_learning/.git/
+
+Check Status of the Repository :
+--------------------------------
+Git_learning> git status
+On branch main                 --Name changed to main from master.
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+Create file Notes.txt manually on project folder(Git_learning).
+
+Check Status of the Repository :
+--------------------------------
+Git_learning> git status
+On branch main
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Notes.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Staging : Add Untracked file to staging.
+----------------------------------------
+Git_learning> git add Notes.txt
+Untracked files(Notes.txt) moved to stage area.
+
+Git commit:
+-----------
+Git_learning> git commit -m "Notest steps updated"
+
+Show commit logs of repository :
+--------------------------------
+Git_learning> git log
+commit full_commit_id (HEAD -> main)
+Author: Suresh kannan <xxx@gmail.com>
+Date:   Sat Jan 27 00:30:15 2024 +0530
+
+------------------------------------------------------------------------------------Until staging -> commiting file to git lecture..
+Display the changes on files : Check Modified file's content :(>git diff)
+------------------------------------------------------------------------
+>git diff (check what changes happens on Un-staged files content.)
+>git diff --staged  (check what changes happens on staged files content.)
+
+Git_learning> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.md
+        creds.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Add all unstaged file's to sttaging :(>git add .)
+-------------------------------------------------
+Git_learning> git add .
+
+Git_learning> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Readme.md
+        new file:   creds.txt
+
+Git_learning> git commit -m "commited  Readme,creds files"
+
+Remove file from Repository :
+-----------------------------
+Git_learning> del creds.txt
+Git_learning> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    creds.txt
+
+Commit the changes after deletion change :
+------------------------------------------
+Git_learning> git commit -m "removed creds.txt file"
+-------------------------------------------------------------------------Local Repository commands learning..
+
+General:
+--------
+ Open source Remote Repository download:  >git clone https..project_url_copy dropdown.
+
+Note : ssh key generate for connect remote repo : >ssh-keygen -o
+We will get unique sha key : ssh-rsa hexadecimal_key
+
+Stored in a specific folder while generating key :
+--------------------------------------------------
+>\.ssh>type id_rsa.pub  (display a file's content on cmd -> >type filename.txt/pdf)
+
+Get the key & store it in gitHub account :
+-------------------------------------------
+Note : go to -> githup ->profile icon-> settings -> SSH-CFG -> paste ssh key with name of folder name/unique name ->save.
+You have successfully added the key 'local-repo' name. 
+(now local repo connected with remote repo using ssh key)
+SHA256: short part of unique key.
