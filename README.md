@@ -1,1 +1,3 @@
-"# git_notes" 
+Author :Suresh kannan
+Purpose : Store learning notes here.
+
